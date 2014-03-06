@@ -1,7 +1,7 @@
 ---
 title: <span class="fa fa-book"></span> Further Resources
 layout: multicourse_page
-categories: [webmaker-theory]
+categories: [en,webmaker-theory]
 ---
 
 # Resource Library

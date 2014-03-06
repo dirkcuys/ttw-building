@@ -1,0 +1,7 @@
+encoding: utf-8
+markdown: redcarpet
+baseurl: webmaker-theory
+url: dirkcuys.github.io
+permalink: :categories/:title/
+ga_tracking_code:
+disqus_shortname:

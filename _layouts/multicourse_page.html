@@ -1,0 +1,42 @@
+---
+layout: base
+---
+{% assign course_category = page.categories[0] %}
+{% assign course=site.data.course[course_category] %}
+
+<div class="row">
+  <div class="sidebar col-sm-4">
+    {% include course_thumb.html course=course %}
+
+    <ul class="nav nav-pills nav-stacked">
+    {% for subpage in site.categories[course.category] reversed %}
+      <li class="{% if subpage.title == page.title %}active{% endif %}" > <a href="{{site.baseurl}}{{ subpage.url }}">{{subpage.title}}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="content col-sm-8">
+    {{ content }}
+
+    {% if site.disqus_shortname %}
+      <hr/>
+      {% include disqus.html %}
+    {% endif %}
+
+    {% if page.topic_url %}
+      <h2>Discussion</h2>
+      <div id="discourse"></div>
+      <script src="{{site.baseurl}}/js/discourse.js?{{page.topic_url}}"></script>
+      <script type="text/javascript">
+          window.onload = function(){
+            write_discourse_section("{{page.topic_url}}");
+          }
+      </script>
+    {% endif %}
+
+    <p>{% include edit_on_github.html %}</p>
+
+  </div>
+
+</div>
+
