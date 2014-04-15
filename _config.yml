@@ -1,7 +1,6 @@
 encoding: utf-8
 markdown: redcarpet
-baseurl: /webmaker-theory
-url: dirkcuys.github.io
+baseurl: /ttw-building
 permalink: :categories/:title/
 languages: ['en']
 ga_tracking_code:
