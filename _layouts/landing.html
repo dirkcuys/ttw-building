@@ -5,9 +5,11 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 {% assign current_course = page.course %}
-{% unless current_course %}
-  {% assign current_course = page.categories[0] %}
-{% endunless %}
+{% assign language = page.url | replace_first:'/','' | split:"/" | first %}
+{% if site.languages contains language %}
+{% else %}
+  {% assign language = 'en' %}
+{% endif %}
 <head>
   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
   <meta charset="utf-8">
@@ -19,39 +21,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="{{site.baseurl}}/img/favicon.ico">
-  
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link href="{{site.baseurl}}/css/makerstrap.min.css" rel="stylesheet">
   <link href="{{site.baseurl}}/css/site.css" rel="stylesheet">
   <link href="{{site.baseurl}}/css/landing.css" rel="stylesheet">
+  {% if page.landing-style %}
+    <link href="{{site.baseurl}}/css/{{page.landing-style}}.landing.css" rel="stylesheet">
+  {% endif %}
 </head>
 <body {% if page.itemtype %}itemscope itemtype="{{page.itemtype}}"{% endif %}>
 
   <div id="wrap">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#id-collapsable-navbar" >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="fa fa-bars fa-fw"></span>
-          </button>
-          <a class="navbar-brand" href="{{site.baseurl}}/">Webmaker Training</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="id-collapsable-navbar">
-          {% include topnav.html %}
-        </div><!-- /.navbar-collapse -->
-      </div>
-    </div>
+    {% if site.languages contains language %}
+      {% assign topnav = 'topnav-' | append:language | append:'.html' }} %}
+      {% include {{topnav}} %}
+    {% else %}
+      {% include topnav-en.html %}
+    {% endif %}
 
     {{ content }}
-
   </div>
 
   {% include footer.html %}
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <!-- Google Analytics -->
   {% if site.ga_tracking_code %}
     {% include ga.html %}

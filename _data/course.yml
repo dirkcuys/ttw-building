@@ -1,10 +1,12 @@
-webmaker-theory:
-  title: "Webmaker Theory"
-  category: webmaker-theory
+building:
+  title: "Building"
+  category: building
   language: en
+  fork_url: https://github.com/dirkcuys/ttw-building
   based_on:
-  image: /img/discover-360px.jpg
-  image_attribution: http://www.flickr.com/photos/mozillaeu/10491775973/in/photostream/
+  image: /img/building-360px.jpg
+  image_attribution: https://secure.flickr.com/photos/debloper/10607673915/in/photostream/
+  attribution_name: Soumya Deb
   organizers:
    - name: Laura
      image: http://placehold.it/400x400

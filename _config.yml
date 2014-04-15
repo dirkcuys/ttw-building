@@ -3,5 +3,6 @@ markdown: redcarpet
 baseurl: /webmaker-theory
 url: dirkcuys.github.io
 permalink: :categories/:title/
+languages: ['en']
 ga_tracking_code:
 disqus_shortname:

@@ -1,0 +1,148 @@
+---
+layout: landing
+landing-style: modules
+---
+
+<!-- BEGIN HEADER JUMOBTRON
+	emmet:
+	header.jumbotron>.container>(.row>.col-md-10.col-md-offset-1.title>h1{Getting Started}+p>lipsum)+(.row>.col-md-2.col-md-offset-10>a[href=#signup].btn.btn-default.btn-lg.btn-block)
+-->
+<header class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 title">
+				<h1>Welcome to Webmaker Training</h1>
+				<p>Learn creative ways to teach <a href="http://webmaker.org/literacy" style="color:white">web literacy</a>, digital skills and open practices with fellow educators, technologists and mentors around the world. #TeachTheWeb</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-10">
+				<a href="https://sendto.mozilla.org/page/s/get-updates-about-webmaker-training" class="btn btn-default btn-lg btn-block">Sign Up</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- END HEADER JUMBOTRON -->
+
+<!-- BEGIN MAIN CONTENT -->
+<main>
+	<!-- BEGIN MODULES
+		emmet:
+		section.modules>.container>.row>.module.col-md-3*4>(.well>(h1>lipsum2)+(p>lipsum20))+a.module-fork.btn.btn-default.btn-lg[href=#module-$]>i.fa.fa-code-fork{ fork}
+	-->
+	<section class="modules">
+		<div class="container">
+			<div class="row">
+				<div class="module col-md-3">
+					<div class="well exploringBanner">
+						<h1>Exploring</h1>
+						<p>Learn about the theoretical frameworks and pedagogies (teaching methods) behind Webmaker. This module helps you understand the web as an ecosystem and why an open web is so important. </p>
+					</div>
+					<a href="http://training.webmakerprototypes.org/exploring/01-explore-concepts/" class="module-fork btn btn-default btn-lg"><i class="fa fa-rocket"> Go</i></a>
+					<a href="{{site.data.course.exploring.fork_url}}" class="module-fork btn btn-default btn-lg"><i class="fa fa-code-fork "> Fork</i></a>
+				</div>
+				<div class="module col-md-3">
+					<div class="well buildingBanner">
+						<h1>Building</h1>
+						<p>Develop open educational resources that embed web literacy and making skills with other topics, such as history or biology (or that you might already be teaching). Using open practices, you'll make learning materials that are relevant, free and designed for others to use and remix.
+</p>
+					</div>
+					<a href="http://training.webmakerprototypes.org/building/explore/" class="module-fork btn btn-default btn-lg"><i class="fa fa-rocket"> Go</i></a>
+					<a href="{{site.data.course.building.fork_url}}" class="module-fork btn btn-default btn-lg"><i class="fa fa-code-fork "> Fork</i></a>
+				</div>
+				<div class="module col-md-3">
+					<div class="well facilitatingBanner">
+						<h1>Facilitating</h1>
+						<p>Put theory into practice. In this module, you'll learn how to use open and participatory learning techniques to teach digital and web literacy skills in your classroom, during a workshop or at an event.</p>
+					</div>
+					<a href="http://training.webmakerprototypes.org/facilitating/explore/" class="module-fork btn btn-default btn-lg"><i class="fa fa-rocket"> Go</i></a>
+					<a href="{{site.data.course.facilitating.fork_url}}" class="module-fork btn btn-default btn-lg"><i class="fa fa-code-fork "> Fork</i></a>
+				</div>
+				<div class="module col-md-3">
+					<div class="well connectingBanner">
+						<h1>Connecting</h1>
+						<p>Amplify your work and reach more people by making connections in your local community as well as within Webmaker's global community. In this module, you'll learn how building relationships can help you achieve greater impact.</p>
+					</div>
+					<a href="http://training.webmakerprototypes.org/connecting/explore/" class="module-fork btn btn-default btn-lg"><i class="fa fa-rocket"> Go</i></a>
+					<a href="{{site.data.course.connecting.fork_url}}" class="module-fork btn btn-default btn-lg"><i class="fa fa-code-fork "> Fork</i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END MODULES -->
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<!-- BEGIN PROMPT
+					emmet:
+					.make-prompt.col-md-6>(h2>lipsum5)+(p*2>lipsum)+a.btn.btn-primary.btn-lg[href=#makeprompt]{Make}
+				-->
+				<div class="make-prompt col-md-6">
+					<h2>Say "Hello" by showing #teachtheweb what you think.</h2>
+					<p>We’re more than handles, icons and profile pictures--we’re humans and peers in this together. In getting started, explore one of the following questions:
+
+    What does “connected learning” mean to you? What does it look like?
+    How would you define “making”? What is something that you see in a new light because of your definition?
+    When is a time you learned something from someone else?
+</p>
+					<a href="https://webmaker.org/en-US/resources" class="btn btn-primary btn-lg">Make</a>
+				</div>
+				<!-- END PROMPT -->
+
+				<!-- BEGIN SOCIAL
+					emmet:
+					.social.col-md-6>h2{Social Hype}+.media*3>(a.pull-left[href=#social]>img[src=http://placebox.es/64/64/?t=$])+.media-body>h4.media-heading{social user $}+p>lipsum20
+				-->
+				<div class="social col-md-6">
+					<h2>Social Hype</h2>
+					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%23teachtheweb"  data-widget-id="446271500572569601">Tweets about "#teachtheweb"</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<!--
+					<div class="media">
+						<a href="#social" class="pull-left"><img src="http://placebox.es/64/64/?t=1" alt=""></a>
+						
+						<div class="media-body">
+							<h4 class="media-heading">social user 1</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, id, velit iste non magnam temporibus voluptate deserunt et voluptatum ullam.</p>
+						</div>
+					</div>
+					<div class="media">
+						<a href="#social" class="pull-left"><img src="http://placebox.es/64/64/?t=2" alt=""></a>
+						<div class="media-body">
+							<h4 class="media-heading">social user 2</h4>
+							<p>Nobis, quaerat quia excepturi aut assumenda maiores deserunt nulla voluptatibus ut obcaecati fuga voluptas porro possimus quo cumque maxime temporibus!</p>
+						</div>
+					</div>
+					<div class="media">
+						<a href="#social" class="pull-left"><img src="http://placebox.es/64/64/?t=3" alt=""></a>
+						<div class="media-body">
+							<h4 class="media-heading">social user 3</h4>
+							<p>Deleniti, voluptatibus, explicabo numquam ipsa dignissimos voluptatum rem accusantium assumenda exercitationem provident velit cupiditate sed quis officia corporis eligendi reiciendis!</p>
+						</div>
+					</div>
+				</div>
+				<!-- END SOCIAL -->
+			</div>
+		</div>
+	</section>
+
+	<!-- BEGIN MY COURSES
+		emmet:
+		section.my-courses>.container>.row>.well.col-md-12>h2{My Courses}+p>lipsum
+	-->
+	<section class="my-courses">
+		<div class="container">
+			<div class="row">
+				<div class="well col-md-12">
+					<h2>My Courses</h2>
+					<p>Placeholder for profile integration...</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END MY COURSES -->
+</main>
+<!-- END MAIN CONTENT -->

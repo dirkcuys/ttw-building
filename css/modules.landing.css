@@ -1,0 +1,48 @@
+body {
+	background-image: none; /* remove background image */
+}
+main > section {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.modules {
+	margin-top: -3rem;
+	background-color: #e3eaee;
+}
+.module .well {
+	background-color: white;
+	min-height:370px;
+}
+.module-fork {
+	margin-top: -21px;
+	border-top: none;
+	border-color: #E3E3E3;
+}
+.module-fork:hover {
+	border-color: #E3E3E3;
+}
+.exploringBanner{
+	border-top: 5px solid #C13832;
+}
+
+.buildingBanner{
+	border-top: 5px solid #3FB58E;
+}
+
+.facilitatingBanner{
+	border-top: 5px solid #FFCD36;
+}
+
+.connectingBanner{
+	border-top: 5px solid #27AAE1;
+}
+.mini{
+	padding-top:0;
+	color:white;
+	padding-bottom:4%;
+}
+
+.mini p{
+	font-size:18px;
+	font-weight:300;
+}
