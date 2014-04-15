@@ -1,1 +1,3 @@
-This is the webmaker theory course for Teach The Web. ATM we're just testing out git submodules with github pages.
+# Building course for Teach The Web
+
+This is the building course for TTW. You can customize this course by forking this GitHub repository and making changes to the content in the _posts folder.
