@@ -4,8 +4,7 @@
   {% assign language = 'en' %}
 {% endif %}
 
-
-<nav class="navbar navbar-webmaker">
+<!--nav class="navbar navbar-webmaker">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#id-collapsable-navbar" >
@@ -15,31 +14,22 @@
       <a class="logo webmaker-logo" href="{{site.baseurl}}/en/"><img src="{{site.baseurl}}/img/training-logo.png"></a>
     </div>
   </div>
-</nav>
+</nav-->
 <nav class="navbar navbar-inverse navbar-no-header-xs collapse navbar-collapse" role="navigation" id="id-collapsable-navbar">
   <div class="container">
 
     <ul class="nav navbar-nav">
-     
-      <li {% if page.start_here %}class="active"{% endif %}><a href="{{ site.baseurl }}/en/start-here/">Start here</a></li> 
-      <li class="dropdown{% if current_course %} active{% endif %}">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          {% for course in site.data.course %}
-            {% if course[1].language == language %}
-            <li {% if course[0] == current_course %}class="active"{% endif %}>
-              {% assign course_category=course[1].category %}
-              {% assign cp=site.categories[course_category] | last %}
-              <a href="{{site.baseurl}}{{ cp.url }}">{{course[1].title}}</a>
-            </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+      
+      <li {% if page.landing %}class="active"{% endif %}>
+        <a class="logo webmaker-logo" href="{{site.baseurl}}/{{language}}/">About</a>
       </li>
-      <li {% if page.host_a_training %}class="active"{% endif %}>
-        <a href="{{ site.baseurl }}/en/host-a-training/">Host a training</a>
-      </li>
-      <li {% if page.help %}class="active"{% endif %}><a href="{{ site.baseurl }}/en/help/">Find help</a></li> 
+      {% for course in site.data.course %}
+        <li {% if course[0] == current_course %}class="active"{% endif %}>
+          {% assign course_category=course[1].category %}
+          {% assign cp=site.categories[course_category] | last %}
+          <a href="{{site.baseurl}}{{ cp.url }}">{{course[1].title}}</a>
+        </li>
+      {% endfor %}
     </ul>
     <ul class="nav navbar-nav navbar-right">
     	<li class="navbar-text">together with</li>
@@ -51,16 +41,15 @@
 </nav>
 <nav class="navbar navbar-inverse navbar-no-header-xs collapse navbar-collapse secondary">
 <div class="container">
- <ul class="nav navbar-nav">
-    {% assign course_category = page.categories[0] %}
+  <ul class="nav navbar-nav">
+    {% assign course_category=page.categories[0] %}
     {% assign course=site.data.course[course_category] %}
-    <li class="course-crumb" ><a href="#">{{course.title}}</a></li>
     {% for subpage in site.categories[course.category] reversed %}
       <li class="{% if subpage.title == page.title %}active{% endif %}" > <a href="{{site.baseurl}}{{ subpage.url }}">{{subpage.title}}</a></li>
     {% endfor %}
     {% if course.category %}
       <li><a href="http://discourse.webmakerprototypes.org/category/{{course.category}}"><i class="fa fa-comments"></i> Discussion</a></li>
     {% endif %}
-    </ul>
+  </ul>
 </div>
 </nav>
